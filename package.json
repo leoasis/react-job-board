@@ -1,0 +1,22 @@
+{
+  "name": "job-board",
+  "version": "0.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "webpack": "~1.4.8",
+    "react-bootstrap": "~0.12.0",
+    "lorem-ipsum": "~1.0.1",
+    "moment": "~2.8.3"
+  },
+  "devDependencies": {
+    "webpack": "~1.4.8",
+    "react": "~0.11.2",
+    "jsx-loader": "~0.11.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

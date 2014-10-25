@@ -16,8 +16,8 @@ module.exports = function() {
   };
 };
 
-var id = 11;
-module.exports.generateJob = function(title) {
+var id = 1;
+var generateJob = module.exports.generateJob = function(title) {
   return {
     id: id++,
     title: title,
@@ -34,138 +34,12 @@ module.exports.generateJob = function(title) {
 };
 
 function getJobs() {
-  return [
-    {
-      id: 1,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 2,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 3,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 4,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 5,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 6,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 7,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 8,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 9,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    },
-    {
-      id: 10,
-      title: title(),
-      postedAt: date(),
-      status: 'Pending Engineer',
-      company: companyName(),
-      commitment: commitment(),
-      timeZone: timezone(),
-      workType: workType(),
-      requiredSkills: skills(),
-      description: description(),
-      applied: false
-    }
-  ];
+  var jobs = [];
+  for (var i = 0; i < 10; i++) {
+    jobs.push(generateJob(title()));
+  }
+
+  return jobs;
 }
 
 function title() {
